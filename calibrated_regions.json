@@ -1,0 +1,38 @@
+{
+  "exchange_window": [
+    572,
+    118,
+    778,
+    849
+  ],
+  "available_trades": [
+    860,
+    213,
+    201,
+    197
+  ],
+  "competing_trades": [
+    861,
+    410,
+    204,
+    196
+  ],
+  "currency_input": [
+    602,
+    221,
+    216,
+    42
+  ],
+  "currency_output": [
+    1100,
+    221,
+    216,
+    42
+  ],
+  "trade_button": [
+    874,
+    303,
+    175,
+    41
+  ]
+}

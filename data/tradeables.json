@@ -1,0 +1,175 @@
+{
+  "soul_cores": [
+    "soul_core_of_topotante",
+    "soul_core_of_jiquani",
+    "soul_core_of_puhuarate",
+    "soul_core_of_quipoloatl",
+    "soul_core_of_cholotl",
+    "soul_core_of_tacati",
+    "soul_core_of_zalatl",
+    "soul_core_of_tzamoto",
+    "soul_core_of_ticaba",
+    "soul_core_of_zantipi",
+    "soul_core_of_opiloti",
+    "soul_core_of_citaqualotl",
+    "soul_core_of_xopec",
+    "soul_core_of_atmohua",
+    "soul_core_of_azcapa"
+  ],
+  "omens": [
+    "omen_of_sinistral_alchemy",
+    "omen_of_dextral_alchemy",
+    "omen_of_dextral_coronation",
+    "omen_of_sinistral_coronation",
+    "omen_of_corruption",
+    "omen_of_resurgence",
+    "omen_of_refreshment",
+    "omen_of_amelioration",
+    "omen_of_greater_amelioration",
+    "omen_of_whittling",
+    "omen_of_sinistral_exaltation",
+    "omen_of_dextral_exaltation",
+    "omen_of_sinistral_erasure",
+    "omen_of_dextral_erasure",
+    "omen_of_sinistral_annulment",
+    "omen_of_dextral_annulment",
+    "omen_of_greater_exaltation"
+  ],
+  "runes": [
+    "desert_rune",
+    "iron_rune",
+    "vision_rune",
+    "glacial_rune",
+    "body_rune",
+    "rebirth_rune",
+    "stone_rune",
+    "storm_rune",
+    "mind_rune",
+    "inspiration_rune"
+  ],
+  "essences": {
+    "regular": [
+      "essence_of_the_body",
+      "essence_of_the_mind",
+      "essence_of_enhancement",
+      "essence_of_electricity",
+      "essence_of_the_infinite",
+      "essence_of_flames",
+      "essence_of_ice",
+      "essence_of_torment",
+      "essence_of_battle",
+      "essence_of_sorcery",
+      "essence_of_ruin",
+      "essence_of_haste"
+    ],
+    "greater": [
+      "greater_essence_of_the_body",
+      "greater_essence_of_the_mind",
+      "greater_essence_of_enhancement",
+      "greater_essence_of_the_infinite",
+      "greater_essence_of_flames",
+      "greater_essence_of_ice",
+      "greater_essence_of_electricity",
+      "greater_essence_of_torment",
+      "greater_essence_of_battle",
+      "greater_essence_of_sorcery",
+      "greater_essence_of_ruin",
+      "greater_essence_of_haste"
+    ]
+  },
+  "expedition": [
+    "broken_circle_artifact",
+    "black_scythe_artifact",
+    "order_artifact",
+    "sun_artifact",
+    "exotic_coinage"
+  ],
+  "fragments": {
+    "ritual": [
+      "an_audience_with_the_king"
+    ],
+    "ultimatum": [
+      "cowardly_fates",
+      "deadly_fates",
+      "victorious_fates"
+    ],
+    "pinnacle": [
+      "ancient_crisis_fragments",
+      "faded_crisis_fragments",
+      "weathered_crisis_fragments"
+    ]
+  },
+  "breach": {
+    "basic": [
+      "breach_splinter",
+      "breachstone"
+    ],
+    "catalysts": [
+      "flesh_catalyst",
+      "neural_catalyst",
+      "carapace_catalyst",
+      "adaptive_catalyst",
+      "xophs_catalyst",
+      "tuls_catalyst",
+      "eshs_catalyst",
+      "uul_netols_catalyst",
+      "reaver_catalyst",
+      "sibilant_catalyst",
+      "chayulas_catalyst",
+      "skittering_catalyst"
+    ]
+  },
+  "delirium": {
+    "simulacrum": [
+      "simulacrum_splinter",
+      "simulacrum"
+    ],
+    "emotions": [
+      "distilled_ire",
+      "distilled_guilt",
+      "distilled_greed",
+      "distilled_paranoia",
+      "distilled_envy",
+      "distilled_disgust",
+      "distilled_despair",
+      "distilled_fear",
+      "distilled_suffering",
+      "distilled_isolation"
+    ]
+  },
+  "currency": {
+    "basic": [
+      "scroll_of_wisdom",
+      "orb_of_augmentation",
+      "orb_of_transmutation",
+      "regal_orb",
+      "exalted_orb",
+      "chaos_orb",
+      "vaal_orb",
+      "orb_of_alchemy",
+      "divine_orb",
+      "orb_of_chance",
+      "orb_of_annulment",
+      "artificers_orb",
+      "mirror_of_kalandra"
+    ],
+    "jeweller": [
+      "lesser_jewellers_orb",
+      "greater_jewellers_orb",
+      "perfect_jewellers_orb"
+    ],
+    "shards": [
+      "transmutation_shard",
+      "regal_shard",
+      "artificers_shard",
+      "chance_shard"
+    ],
+    "quality": [
+      "armourers_scrap",
+      "blacksmiths_whetstone",
+      "arcanists_etcher",
+      "glassblowers_bauble",
+      "gemcutters_prism"
+    ]
+  }
+} 
