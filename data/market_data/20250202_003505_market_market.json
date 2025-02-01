@@ -1,0 +1,24 @@
+{
+  "i_want": "Black Scythe Artifact",
+  "i_have": "Orb of Annulment",
+  "market_ratio": "1:1",
+  "available_trades": [],
+  "competing_trades": [
+    {
+      "ratio": "4.52:1",
+      "stock": "Silver Mask"
+    },
+    {
+      "ratio": "4.20:1",
+      "stock": "Silver Mask"
+    },
+    {
+      "ratio": "9.09:1",
+      "stock": "Jade Mask"
+    },
+    {
+      "ratio": "4.76:1",
+      "stock": "Bone Mask"
+    }
+  ]
+}

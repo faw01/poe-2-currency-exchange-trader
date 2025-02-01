@@ -1,0 +1,21 @@
+```json
+{
+    "i_want": "Simulacrum",
+    "i_have": "Simulacrum Splinter",
+    "market_ratio": "1:227",
+     "available_trades": [
+        {"ratio": "1:x", "stock": "Distilled Ire"},
+        {"ratio": "1:x", "stock": "Distilled Paranoia"},
+        {"ratio": "1:x", "stock": "Distilled Despair"},
+        {"ratio": "1:x", "stock": "Distilled Isolation"}
+    ],
+    "competing_trades": [
+        {"ratio": "1:x", "stock": "Distilled Guilt"},
+        {"ratio": "1:x", "stock": "Distilled Envy"},
+          {"ratio": "1:x", "stock": "Distilled Fear"},
+           {"ratio": "1:14", "stock": "Distilled Greed"},
+          {"ratio": "1:x", "stock": "Distilled Disg"},
+         {"ratio": "1:x", "stock": "Distilled Suffe"}
+   ]
+}
+```

@@ -1,0 +1,57 @@
+{
+  "i_want": "Exalted Orb",
+  "i_have": "Simulacrum Splinter",
+  "market_ratio": "1:2.58",
+  "available_trades": [
+    {
+      "ratio": "1:2.58",
+      "stock": 48
+    },
+    {
+      "ratio": "1:2.73",
+      "stock": 15
+    },
+    {
+      "ratio": "1:2.86",
+      "stock": 7
+    },
+    {
+      "ratio": "1:2.97",
+      "stock": 303
+    },
+    {
+      "ratio": "1:2.98",
+      "stock": 550
+    },
+    {
+      "ratio": "<1:2.98",
+      "stock": 7028
+    }
+  ],
+  "competing_trades": [
+    {
+      "ratio": "1:2.57",
+      "stock": 719
+    },
+    {
+      "ratio": "1:2.55",
+      "stock": 3825
+    },
+    {
+      "ratio": "1:2.55",
+      "stock": 1120
+    },
+    {
+      "ratio": "1:2.53",
+      "stock": 253
+    },
+    {
+      "ratio": "1:2.52",
+      "stock": 530
+    },
+    {
+      "ratio": ">1:2.52",
+      "stock": 76768
+    }
+  ]
+}

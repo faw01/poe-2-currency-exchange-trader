@@ -1,0 +1,57 @@
+{
+  "i_want": "Breach Splinter",
+  "i_have": "Exalted Orb",
+  "market_ratio": "1.38:1",
+  "available_trades": [
+    {
+      "ratio": "1.38:1",
+      "stock": 667
+    },
+    {
+      "ratio": "1.38:1",
+      "stock": 299
+    },
+    {
+      "ratio": "1.38:1",
+      "stock": 242
+    },
+    {
+      "ratio": "1.37:1",
+      "stock": 238
+    },
+    {
+      "ratio": "1.36:1",
+      "stock": 180
+    },
+    {
+      "ratio": "< 1.36:1",
+      "stock": 68173
+    }
+  ],
+  "competing_trades": [
+    {
+      "ratio": "1.49:1",
+      "stock": 3100
+    },
+    {
+      "ratio": "1.49:1",
+      "stock": 540
+    },
+    {
+      "ratio": "1.50:1",
+      "stock": 6260
+    },
+    {
+      "ratio": "1.52:1",
+      "stock": 33
+    },
+    {
+      "ratio": "1.52:1",
+      "stock": 1025
+    },
+    {
+      "ratio": "> 1.52:1",
+      "stock": 31585
+    }
+  ]
+}

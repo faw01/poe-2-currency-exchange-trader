@@ -3,9 +3,11 @@ import json
 from pathlib import Path
 import google.generativeai as genai
 from PIL import Image
-from typing import Dict, Any
+from typing import Dict, Any, Optional
 from datetime import datetime
 from dotenv import load_dotenv
+from src.models.market_data import MarketData
+from .gemini import setup_gemini, save_raw_response
 
 # Load environment variables from .env file
 load_dotenv()
@@ -48,7 +50,7 @@ def save_raw_response(response_text: str, image_path: Path):
     print(f"Raw response saved to: {response_path}")
     return response_path
 
-def analyze_market_image(image_path: Path) -> Dict[str, Any]:
+def analyze_market_image(image_path: Path) -> Optional[MarketData]:
     """Analyze market screenshot using Gemini Vision API"""
     # Load the image
     img = Image.open(image_path)
@@ -91,7 +93,10 @@ def analyze_market_image(image_path: Path) -> Dict[str, Any]:
             
         # Parse JSON
         data = json.loads(json_str)
-        return data
+        
+        # Convert to MarketData object
+        market_data = MarketData.from_dict(data)
+        return market_data
     except Exception as e:
         print(f"Error parsing Gemini response: {e}")
         print(f"Raw response: {response.text}")
@@ -128,14 +133,17 @@ def analyze_latest_market():
             return
             
         # Save results
-        json_path = save_market_data(market_data, image_path)
+        json_path = save_market_data(market_data.to_dict(), image_path)
         
         # Print results
         print("\nMarket Analysis Results:")
-        print(json.dumps(market_data, indent=2))
+        print(json.dumps(market_data.to_dict(), indent=2))
+        
+        return market_data
         
     except Exception as e:
         print(f"Error analyzing market: {e}")
+        return None
 
 if __name__ == "__main__":
     analyze_latest_market() 

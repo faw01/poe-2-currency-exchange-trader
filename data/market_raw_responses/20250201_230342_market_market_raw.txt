@@ -1,0 +1,9 @@
+```json
+{
+    "i_want": "Breach Splinter",
+    "i_have": "Chaos Orb",
+    "market_ratio": "6.50:1",
+    "available_trades": [],
+    "competing_trades": []
+}
+```

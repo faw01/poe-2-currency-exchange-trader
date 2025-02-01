@@ -1,0 +1,9 @@
+```json
+{
+    "i_want": "self.i_want",
+    "i_have": "self.i_have",
+    "market_ratio": "str",
+    "available_trades": [],
+    "competing_trades": []
+}
+```

@@ -1,0 +1,43 @@
+```json
+{
+    "i_want": "Essence of the Mind",
+    "i_have": "Orb of Annulment",
+    "market_ratio": "1:1",
+    "available_trades": [
+        {
+            "ratio": "4.52:1",
+            "stock": "Essence of Horror"
+        },
+        {
+            "ratio": "4.20:1",
+            "stock": "Essence of Horror"
+        },
+        {
+           "ratio": "9.09:1",
+           "stock": "Essence of Delirium"
+        },
+         {
+            "ratio": "4.76:1",
+            "stock":"Remnant of Corruption"
+        }
+    ],
+    "competing_trades": [
+         {
+            "ratio": "1:4.33",
+            "stock": "Essence of Horror"
+        },
+         {
+            "ratio": "1:4.33",
+            "stock":"Essence of Horror"
+         },
+        {
+           "ratio": "1:6.50",
+           "stock":"Remnant of Corruption"
+        },
+        {
+            "ratio": "1:1",
+            "stock": "Essence of Horror"
+        }
+    ]
+}
+```

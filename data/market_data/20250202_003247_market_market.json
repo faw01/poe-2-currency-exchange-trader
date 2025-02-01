@@ -1,0 +1,57 @@
+{
+  "i_want": "Vaal Orb",
+  "i_have": "Exalted Orb",
+  "market_ratio": "3.61 : 1",
+  "available_trades": [
+    {
+      "ratio": "3.61 : 1",
+      "stock": 361
+    },
+    {
+      "ratio": "3.60 : 1",
+      "stock": 2142
+    },
+    {
+      "ratio": "3.58 : 1",
+      "stock": 1200
+    },
+    {
+      "ratio": "3.57 : 1",
+      "stock": 1400
+    },
+    {
+      "ratio": "3.55 : 1",
+      "stock": 355
+    },
+    {
+      "ratio": "< 3.55 : 1",
+      "stock": 109183
+    }
+  ],
+  "competing_trades": [
+    {
+      "ratio": "3.64 : 1",
+      "stock": 11
+    },
+    {
+      "ratio": "4.40 : 1",
+      "stock": 240
+    },
+    {
+      "ratio": "4.45 : 1",
+      "stock": 20
+    },
+    {
+      "ratio": "4.50 : 1",
+      "stock": 1374
+    },
+    {
+      "ratio": "4.55 : 1",
+      "stock": 220
+    },
+    {
+      "ratio": "> 4.55 : 1",
+      "stock": 29799
+    }
+  ]
+}

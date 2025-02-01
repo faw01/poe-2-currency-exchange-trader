@@ -1,0 +1,5 @@
+armourers_scrap
+exalted_orb
+vaal_orb
+orb_of_annulment
+black_scythe_artifact

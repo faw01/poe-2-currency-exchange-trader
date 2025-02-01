@@ -1,0 +1,43 @@
+```json
+{
+    "i_want": "Distilled Envy",
+    "i_have": "Vaal Orb",
+    "market_ratio": "No Stock",
+    "available_trades": [
+        {
+          "ratio": "4.52:1",
+          "stock": "Chaos Orb"
+        },
+        {
+            "ratio": "9.09:1",
+            "stock": "Divine Orb"
+        },
+         {
+           "ratio": "4.20:1",
+           "stock": "Chaos Orb"
+        },
+        {
+           "ratio": "4.76:1",
+           "stock": "Chaos Orb"
+        }
+    ],
+    "competing_trades": [
+        {
+            "ratio": "1:1",
+            "stock": 8
+        },
+        {
+            "ratio": "2:1",
+            "stock": 10
+        },
+        {
+            "ratio": "3:1",
+            "stock": 1
+        },
+        {
+            "ratio": "5:1",
+            "stock": 1
+        }
+    ]
+}
+```

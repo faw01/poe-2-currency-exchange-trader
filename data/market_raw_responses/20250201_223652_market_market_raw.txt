@@ -1,0 +1,43 @@
+```json
+{
+    "i_want": "Breach Splinter",
+    "i_have": "Simulacrum Splinter",
+    "market_ratio": "1:3.90",
+    "available_trades": [
+        {
+            "ratio": "1:3.90",
+            "stock": 280
+        },
+        {
+            "ratio": "1:4",
+             "stock": 662
+        }
+    ],
+    "competing_trades": [
+        {
+            "ratio": "1:1.40",
+            "stock": 847
+        },
+        {
+            "ratio": "1:1.31",
+            "stock": 897
+        },
+        {
+            "ratio": "1:1.30",
+            "stock": 1352
+        },
+        {
+            "ratio": "1:1.25",
+            "stock": 220
+        },
+         {
+            "ratio": "1:1.20",
+            "stock": 288
+         },
+         {
+            "ratio": "> 1:1.20",
+            "stock": 5235
+        }
+    ]
+}
+```

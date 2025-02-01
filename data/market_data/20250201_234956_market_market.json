@@ -1,0 +1,57 @@
+{
+  "i_want": "Breach Splinter",
+  "i_have": "Chaos Orb",
+  "market_ratio": "6.25 : 1",
+  "available_trades": [
+    {
+      "ratio": "6.25 : 1",
+      "stock": 350
+    },
+    {
+      "ratio": "6.15 : 1",
+      "stock": 166
+    },
+    {
+      "ratio": "6.10 : 1",
+      "stock": 122
+    },
+    {
+      "ratio": "6 : 1",
+      "stock": 630
+    },
+    {
+      "ratio": "3.75 : 1",
+      "stock": 315
+    },
+    {
+      "ratio": "< 3.75 : 1",
+      "stock": 1898
+    }
+  ],
+  "competing_trades": [
+    {
+      "ratio": "8.40 : 1",
+      "stock": 10
+    },
+    {
+      "ratio": "8.47 : 1",
+      "stock": 177
+    },
+    {
+      "ratio": "8.50 : 1",
+      "stock": 92
+    },
+    {
+      "ratio": "8.66 : 1",
+      "stock": 29
+    },
+    {
+      "ratio": "8.80 : 1",
+      "stock": 330
+    },
+    {
+      "ratio": "> 8.80 : 1",
+      "stock": 1795
+    }
+  ]
+}

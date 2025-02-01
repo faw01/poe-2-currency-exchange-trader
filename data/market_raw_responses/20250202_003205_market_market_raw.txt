@@ -1,0 +1,59 @@
+```json
+{
+    "i_want": "Exalted Orb",
+    "i_have": "Orb of Annulment",
+    "market_ratio": "16.10: 1",
+    "available_trades": [
+        {
+            "ratio": "16.10: 1",
+            "stock": 26694
+        },
+        {
+            "ratio": "16.10: 1",
+            "stock": 1449
+        },
+        {
+            "ratio": "16.09: 1",
+            "stock": 869
+        },
+        {
+           "ratio": "16: 1",
+           "stock": 5472
+        },
+        {
+            "ratio": "15.94: 1",
+            "stock": 510
+        },
+         {
+            "ratio": "< 15.94: 1",
+            "stock": 90571
+        }
+    ],
+    "competing_trades": [
+         {
+            "ratio": "16.67: 1",
+            "stock": 3
+        },
+        {
+            "ratio": "17: 1",
+            "stock": 64
+        },
+         {
+            "ratio": "17.48: 1",
+            "stock": 135
+        },
+        {
+            "ratio":"17.49: 1",
+            "stock": 63
+        },
+         {
+            "ratio":"17.50: 1",
+             "stock": 660
+        },
+         {
+            "ratio": "> 17.50: 1",
+            "stock": 2387
+        }
+    ]
+}
+```

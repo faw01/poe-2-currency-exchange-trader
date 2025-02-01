@@ -247,14 +247,6 @@
       }
     ]
   },
-  "i_have_chaos_orb": {
-    "select": [
-      {
-        "x": 1278,
-        "y": 244
-      }
-    ]
-  },
   "i_want_chayulas_catalyst": {
     "select": [
       {
@@ -2098,6 +2090,14 @@
           "x2": 1346,
           "y2": 610
         }
+      }
+    ]
+  },
+  "i_have_chaos_orb": {
+    "select": [
+      {
+        "x": 1365,
+        "y": 246
       }
     ]
   }

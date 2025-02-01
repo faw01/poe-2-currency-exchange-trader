@@ -1,0 +1,43 @@
+```json
+{
+    "i_want": "Vaal Orb",
+    "i_have": "Black Scythe Artifact",
+    "market_ratio": "1:10",
+    "available_trades": [
+        {
+            "ratio": "4.52:1",
+            "stock": "Engraved Idol"
+        },
+        {
+           "ratio": "9.09:1",
+           "stock": "Grand Idol"
+        },
+        {
+           "ratio": "4.20:1",
+           "stock": "Engraved Idol"
+        },
+       {
+            "ratio": "4.76:1",
+            "stock": "Iron Coin"
+        }
+    ],
+    "competing_trades": [
+        {
+            "ratio": "1:3.61",
+            "stock": "Vaal Orb"
+        },
+         {
+            "ratio": "1:6.50",
+            "stock": "Ancient Coin"
+        },
+       {
+            "ratio": "1:3.61",
+            "stock": "Vaal Orb"
+        },
+        {
+            "ratio": "1:1",
+           "stock": "Vaal Orb"
+        }
+    ]
+}
+```

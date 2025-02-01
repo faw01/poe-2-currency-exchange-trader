@@ -1,0 +1,21 @@
+```json
+{
+    "i_want": "Simulacrum Splinter",
+    "i_have": "Chaos Orb",
+    "market_ratio": "12:1",
+    "available_trades": [
+        {"ratio": "12:1", "stock": 2124},
+        {"ratio": "11.10:1", "stock": 222},
+        {"ratio": "11:1", "stock": 3355},
+         {"ratio": "10.96:1", "stock": 296},
+        {"ratio": "10:1", "stock": 830},
+        {"ratio": "< 10:1", "stock": 3746}
+    ],
+    "competing_trades": [
+        {"ratio": "18:1", "stock": 202},
+         {"ratio": "19:1", "stock": 47},
+         {"ratio": "20:1", "stock": 42},
+         {"ratio": "100:1", "stock": 3}
+    ]
+}
+```

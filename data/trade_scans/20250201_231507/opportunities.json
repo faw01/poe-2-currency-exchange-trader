@@ -1,0 +1,14 @@
+[
+  {
+    "timestamp": "2025-02-01T23:15:19.588372",
+    "pair": [
+      "breach_splinter",
+      "chaos_orb"
+    ],
+    "direction": "forward",
+    "market_data": {
+      "i_want": "Breach Splinter",
+      "i_have": "Chaos Orb",
+      "market_ratio": "6.50:1",
+      "available_trades": [
+        

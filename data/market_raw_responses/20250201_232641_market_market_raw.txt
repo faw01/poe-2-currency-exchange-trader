@@ -1,0 +1,23 @@
+```json
+{
+    "i_want": "Chaos Orb",
+    "i_have": "Breach Splinter",
+    "market_ratio": "1:8.50",
+    "available_trades": [
+        {"ratio": "1:8.50", "stock": 52},
+        {"ratio": "1:8.66", "stock": 29},
+        {"ratio": "1:8.80", "stock": 330},
+        {"ratio": "1:8.88", "stock": 169},
+         {"ratio": "1:9", "stock": 1674},
+        {"ratio": "<1:9", "stock": 124}
+    ],
+    "competing_trades": [
+         {"ratio": "1:6.10", "stock": 183},
+        {"ratio": "1:6", "stock": 1056},
+         {"ratio": "1:3.75", "stock": 315},
+         {"ratio": "1:3.73", "stock": 1118},
+        {"ratio": "1:3.66", "stock": 256},
+        {"ratio": ">1:3.66", "stock": 513}
+    ]
+}
+```

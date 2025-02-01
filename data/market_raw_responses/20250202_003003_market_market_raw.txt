@@ -1,0 +1,23 @@
+```json
+{
+    "i_want": "Armourer's Scrap",
+    "i_have": "Vaal Orb",
+    "market_ratio": "1:4.65",
+    "available_trades": [
+        {"ratio": "1:4.62", "stock": 109},
+        {"ratio": "1:4.65", "stock": 123},
+        {"ratio": "1:4.69", "stock": 32},
+        {"ratio": "1:4.75", "stock": 120},
+        {"ratio": "1:4.79", "stock": 100},
+         {"ratio": "<1:4.79", "stock": 2259}
+    ],
+    "competing_trades": [
+         {"ratio": "1:1", "stock": 251},
+        {"ratio": "1.85:1", "stock": 20},
+         {"ratio": "1.90:1", "stock": 140},
+        {"ratio": "2:1", "stock": 49},
+        {"ratio": "3:1", "stock": 319},
+        {"ratio": ">3:1", "stock": 1327}
+    ]
+}
+```

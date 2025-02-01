@@ -1,0 +1,9 @@
+```json
+{
+    "i_want": "artifact",
+    "i_have": "ent",
+    "market_ratio": null,
+    "available_trades": [],
+    "competing_trades": []
+}
+```

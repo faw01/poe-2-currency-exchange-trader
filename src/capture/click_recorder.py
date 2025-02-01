@@ -2,7 +2,7 @@ import json
 import pyautogui
 import time
 from pathlib import Path
-from typing import List, Dict, Literal, Set
+from typing import List, Dict, Literal, Set, Optional
 import pytesseract
 from PIL import Image
 import io
@@ -373,7 +373,7 @@ class ClickRecorder:
         print(f"\nRecorded {len(clicks)} positions")
         return True
 
-    def play_sequence(self, item_name: str, sequence_type: str = "select"):
+    def play_sequence(self, item_name: str, sequence_type: str = "select", current_i_want: Optional[str] = None, amount: Optional[str] = None):
         """Play back a recorded sequence"""
         if sequence_type not in SEQUENCE_TYPES:
             print(f"Invalid sequence type. Valid types are: {', '.join(SEQUENCE_TYPES.keys())}")
@@ -385,42 +385,48 @@ class ClickRecorder:
 
         sequence = self.sequences[item_name][sequence_type]
         
-        # For amount sequences, ask for the value to input
+        # For amount sequences, use the provided amount
         if sequence_type == "amount":
-            amount = input("Enter the amount to input: ")
+            if amount is None:
+                print("Error: amount parameter is required for amount sequences")
+                return False
+            
             print("\nSwitch to POE window...")
-            time.sleep(2)  # Give time to switch windows
+            time.sleep(0.5)  # Give time to switch windows
             
             for click in sequence:
                 # 1. Click the input field
                 pyautogui.moveTo(click["x"], click["y"])
-                time.sleep(0.5)  # Delay before click
+                time.sleep(0.1)  # Delay before click
                 pyautogui.click()
-                time.sleep(0.5)  # Delay after click
+                time.sleep(0.1)  # Delay after click
                 
                 # 2. Select all text (Command+A)
                 pyautogui.hotkey('command', 'a')
-                time.sleep(0.5)  # Delay after select all
+                time.sleep(0.1)  # Delay after select all
                 
                 # 3. Press backspace to delete
                 pyautogui.press('backspace')
-                time.sleep(0.5)  # Delay after delete
+                time.sleep(0.1)  # Delay after delete
                 
                 # 4. Type the new amount
                 pyautogui.write(str(amount))
-                time.sleep(0.5)  # Delay after typing
+                time.sleep(0.1)  # Delay after typing
         elif sequence_type == "market":
             print("\nSwitch to POE window...")
-            time.sleep(2)  # Give time to switch windows
+            time.sleep(0.5)  # Give time to switch windows
             
             # Move to position and capture market info
             tradeable_click = sequence[0]  # Only one position recorded - the tradeable
             print(f"Moving to position ({tradeable_click['x']}, {tradeable_click['y']})")
             pyautogui.moveTo(tradeable_click["x"], tradeable_click["y"])
-            time.sleep(0.5)  # Delay before capture
+            time.sleep(0.1)  # Delay before capture
             
             # Hold command key and capture
-            pyautogui.keyDown('command')
+            for _ in range(3):  # Try up to 3 times to ensure key is pressed
+                pyautogui.keyDown('command')
+                time.sleep(0.1)  # Small delay to ensure key is registered
+            
             time.sleep(0.5)  # Wait for market info to appear
             
             # Capture and analyze market info
@@ -431,57 +437,75 @@ class ClickRecorder:
                 tradeable_click.get("region", None)
             )
             
-            # Release command key
-            pyautogui.keyUp('command')
-            time.sleep(0.5)  # Hold for remaining time
-            
-            # Print the captured text
-            print("\nCaptured Market Information:")
-            print("=" * 40)
-            print(market_text)
-            print("=" * 40)
+            # Release command key (multiple times to ensure it's released)
+            for _ in range(3):
+                pyautogui.keyUp('command')
+                time.sleep(0.1)
         elif sequence_type == "trade":
             print("\nSwitch to POE window...")
-            time.sleep(2)  # Give time to switch windows
+            time.sleep(0.5)  # Give time to switch windows
             
             # Simply move to position and click
             for click in sequence:
                 print(f"Clicking trade button at ({click['x']}, {click['y']})")
                 pyautogui.moveTo(click["x"], click["y"])
-                time.sleep(0.5)  # Delay before click
+                time.sleep(0.1)  # Delay before click
                 pyautogui.click()
-                time.sleep(0.5)  # Delay after click
+                time.sleep(0.1)  # Delay after click
         else:
             print("\nSwitch to POE window...")
-            time.sleep(2)  # Give time to switch windows
+            time.sleep(0.5)  # Give time to switch windows
             
             # Determine if this is i_want or i_have
             is_want = item_name.startswith("i_want_")
+            clean_name = item_name[7:]  # Remove i_want_ or i_have_ prefix
             
-            # 1. Click the appropriate tab (i_want or i_have)
-            tab_pos = FIXED_PREFIXES["i_want" if is_want else "i_have"][0]
-            print(f"Clicking {'i_want' if is_want else 'i_have'} tab at ({tab_pos['x']}, {tab_pos['y']})")
-            pyautogui.moveTo(tab_pos["x"], tab_pos["y"])
-            time.sleep(0.5)  # Delay before click
-            pyautogui.click()
-            time.sleep(0.5)  # Delay after click
+            # For i_want sequences, check if we need to change the tab and category
+            if is_want:
+                if current_i_want is None or current_i_want != clean_name:
+                    # Click the i_want tab
+                    tab_pos = FIXED_PREFIXES["i_want"][0]
+                    print(f"Clicking i_want tab at ({tab_pos['x']}, {tab_pos['y']})")
+                    pyautogui.moveTo(tab_pos["x"], tab_pos["y"])
+                    time.sleep(0.1)  # Delay before click
+                    pyautogui.click()
+                    time.sleep(0.1)  # Delay after click
+                    
+                    # Click the category
+                    category = get_category_for_item(clean_name)
+                    category_pos = I_WANT_CATEGORY_POSITIONS[category]
+                    print(f"Clicking {category} category at ({category_pos['x']}, {category_pos['y']})")
+                    pyautogui.moveTo(category_pos["x"], category_pos["y"])
+                    time.sleep(0.1)  # Delay before click
+                    pyautogui.click()
+                    time.sleep(0.1)  # Delay after click
+                else:
+                    print(f"Keeping current i_want {clean_name}...")
+            else:
+                # Always click i_have tab and category
+                tab_pos = FIXED_PREFIXES["i_have"][0]
+                print(f"Clicking i_have tab at ({tab_pos['x']}, {tab_pos['y']})")
+                pyautogui.moveTo(tab_pos["x"], tab_pos["y"])
+                time.sleep(0.1)  # Delay before click
+                pyautogui.click()
+                time.sleep(0.1)  # Delay after click
+                
+                # Click the category
+                category = get_category_for_item(clean_name)
+                category_pos = I_HAVE_CATEGORY_POSITIONS[category]  # Use I_HAVE_CATEGORY_POSITIONS here
+                print(f"Clicking {category} category at ({category_pos['x']}, {category_pos['y']})")
+                pyautogui.moveTo(category_pos["x"], category_pos["y"])
+                time.sleep(0.1)  # Delay before click
+                pyautogui.click()
+                time.sleep(0.1)  # Delay after click
             
-            # 2. Click the appropriate category
-            category = get_category_for_item(item_name)
-            category_pos = (I_WANT_CATEGORY_POSITIONS if is_want else I_HAVE_CATEGORY_POSITIONS)[category]
-            print(f"Clicking {category} category at ({category_pos['x']}, {category_pos['y']})")
-            pyautogui.moveTo(category_pos["x"], category_pos["y"])
-            time.sleep(0.5)  # Delay before click
-            pyautogui.click()
-            time.sleep(0.5)  # Delay after click
-            
-            # 3. Click the recorded item position
+            # Click the item position
             for click in sequence:
                 print(f"Clicking item at ({click['x']}, {click['y']})")
                 pyautogui.moveTo(click["x"], click["y"])
-                time.sleep(0.5)  # Delay before click
+                time.sleep(0.1)  # Delay before click
                 pyautogui.click()
-                time.sleep(0.5)  # Delay after click
+                time.sleep(0.1)  # Delay after click
         
         return True
 
@@ -516,14 +540,14 @@ def test_all_sequences(recorder: ClickRecorder):
     if choice == "1":
         print("\nWill test all sequences")
         print("Switch to POE window...")
-        time.sleep(2)
+        time.sleep(0.5)
         
         for item_name, sequences in sorted(recorder.sequences.items()):
             print(f"\nTesting {item_name}...")
             for seq_type in sequences:
                 print(f"Playing {seq_type} sequence...")
                 recorder.play_sequence(item_name, seq_type)
-                time.sleep(0.5)
+                time.sleep(0.1)
                 
     elif choice == "2":
         categories = set()
@@ -543,7 +567,7 @@ def test_all_sequences(recorder: ClickRecorder):
         side = input("Which side to test (want/have/both)? ").lower()
         
         print("\nSwitch to POE window...")
-        time.sleep(2)
+        time.sleep(0.5)
         
         # Test i_want sequences for category
         if side in ["want", "both"]:
@@ -553,7 +577,7 @@ def test_all_sequences(recorder: ClickRecorder):
                     if get_category_for_item(clean_name) == category:
                         print(f"\nTesting {item_name}...")
                         recorder.play_sequence(item_name, "select")
-                        time.sleep(0.5)
+                        time.sleep(0.1)
                         
         # Test i_have sequences for category
         if side in ["have", "both"]:
@@ -563,7 +587,7 @@ def test_all_sequences(recorder: ClickRecorder):
                     if get_category_for_item(clean_name) == category:
                         print(f"\nTesting {item_name}...")
                         recorder.play_sequence(item_name, "select")
-                        time.sleep(0.5)
+                        time.sleep(0.1)
                         
     elif choice == "3":
         print("\nAvailable items:")
@@ -573,12 +597,12 @@ def test_all_sequences(recorder: ClickRecorder):
         item_name = input("\nEnter item name to test: ")
         if item_name in recorder.sequences:
             print("\nSwitch to POE window...")
-            time.sleep(2)
+            time.sleep(0.5)
             
             for seq_type in recorder.sequences[item_name]:
                 print(f"\nPlaying {seq_type} sequence...")
                 recorder.play_sequence(item_name, seq_type)
-                time.sleep(0.5)
+                time.sleep(0.1)
         else:
             print("Item not found!")
             
@@ -608,7 +632,7 @@ def test_all_sequences(recorder: ClickRecorder):
             return
             
         print("\nSwitch to POE window...")
-        time.sleep(2)
+        time.sleep(0.5)
         
         # Get all items in the category
         items = []
@@ -627,14 +651,14 @@ def test_all_sequences(recorder: ClickRecorder):
                 if sequence_name in recorder.sequences:
                     print(f"\nTesting {sequence_name}...")
                     recorder.play_sequence(sequence_name, "select")
-                    time.sleep(0.5)
+                    time.sleep(0.1)
                     
             if side in ["have", "both"]:
                 sequence_name = f"i_have_{item}"
                 if sequence_name in recorder.sequences:
                     print(f"\nTesting {sequence_name}...")
                     recorder.play_sequence(sequence_name, "select")
-                    time.sleep(0.5)
+                    time.sleep(0.1)
 
 def find_position():
     """Tool to help find cursor positions"""
@@ -717,7 +741,7 @@ def rerecord_tradeables(recorder: ClickRecorder):
         return
         
     print("\nSwitch to POE window...")
-    time.sleep(2)
+    time.sleep(0.5)
     
     for item in sorted(items_to_record):
         print(f"\n=== Re-recording position for {item} ===")
@@ -866,7 +890,7 @@ def main():
             sequence_type = input("\nSequence type (default: select): ") or "select"
             
             print("\nSwitch to POE window...")
-            time.sleep(2)  # Give time to switch windows
+            time.sleep(0.5)  # Give time to switch windows
             recorder.record_sequence(item_name, sequence_type)
             
         elif choice == "2":
@@ -883,7 +907,7 @@ def main():
             item_name = input("\nItem name: ")
             sequence_type = input("Sequence type (default: select): ") or "select"
             print("\nSwitch to POE window...")
-            time.sleep(2)  # Give time to switch windows
+            time.sleep(0.5)  # Give time to switch windows
             recorder.play_sequence(item_name, sequence_type)
             
         elif choice == "3":  # Record all tradeables

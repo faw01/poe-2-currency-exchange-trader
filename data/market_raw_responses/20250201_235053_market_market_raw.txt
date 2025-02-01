@@ -1,0 +1,13 @@
+```json
+{
+    "i_want": "Chaos Orb",
+    "i_have": "Simulacrum Splinter",
+    "market_ratio": "1:17.75",
+    "available_trades": [
+        {"ratio": "9.09:1", "stock": "Chaos Orb"}
+    ],
+    "competing_trades": [
+        {"ratio": "1:6.50", "stock": "Simulacrum Splinter"}
+    ]
+}
+```

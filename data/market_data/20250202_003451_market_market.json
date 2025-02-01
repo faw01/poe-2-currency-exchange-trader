@@ -1,0 +1,29 @@
+{
+  "i_want": "Black Scythe Artifact",
+  "i_have": "Vaal Orb",
+  "market_ratio": "No Stock",
+  "available_trades": [
+    {
+      "ratio": "4.52:1",
+      "stock": "Fractured Skull"
+    },
+    {
+      "ratio": "9.09:1",
+      "stock": "Primalist's Mask"
+    },
+    {
+      "ratio": "4.20:1",
+      "stock": "Fractured Skull"
+    },
+    {
+      "ratio": "4.76:1",
+      "stock": "Faceted Glass"
+    }
+  ],
+  "competing_trades": [
+    {
+      "ratio": "10:1",
+      "stock": 1
+    }
+  ]
+}

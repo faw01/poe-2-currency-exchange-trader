@@ -1,0 +1,27 @@
+```json
+{
+    "i_want": "Simulacrum Splinter",
+    "i_have": "Vaal Orb",
+    "market_ratio": "1:10",
+    "available_trades": [
+        {
+            "ratio": "1:10",
+            "stock": 101
+        }
+    ],
+    "competing_trades": [
+        {
+            "ratio": "1:1",
+            "stock": 1051
+        },
+        {
+            "ratio": "5:1",
+            "stock": 1
+        },
+        {
+            "ratio": "6:1",
+            "stock": 9
+        }
+    ]
+}
+```

@@ -1,0 +1,19 @@
+```json
+{
+    "i_want": "Breach Splinter",
+    "i_have": "Simulacrum Splinter",
+    "market_ratio": "1:3.90",
+    "available_trades": [
+        {
+            "ratio": "1:3.90",
+            "stock": 230
+        }
+    ],
+    "competing_trades": [
+        {
+            "ratio": "1:4",
+            "stock": 655
+        }
+    ]
+}
+```

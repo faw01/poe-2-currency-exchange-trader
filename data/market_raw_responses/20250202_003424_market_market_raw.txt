@@ -1,0 +1,42 @@
+```json
+{
+    "i_want": "Black Scythe Artifact",
+    "i_have": "Armourer's Scrap",
+    "market_ratio": "1:1",
+    "available_trades": [],
+    "competing_trades": [
+        {
+            "ratio": "4.52:1",
+            "stock": "Skull"
+        },
+        {
+            "ratio": "1:4",
+            "stock": "Skull Faces"
+        },
+        {
+           "ratio": "4.20:1",
+            "stock": "Skull"
+        },
+        {
+           "ratio": "1:4",
+            "stock": "Skull Faces"
+        },
+       {
+            "ratio":"9.09:1",
+            "stock": "Skull Faces"
+        },
+       {
+            "ratio": "1:6.60",
+            "stock": "Amethyst"
+        },
+        {
+            "ratio":"4.76:1",
+            "stock": "Bone Scraps"
+        },
+        {
+            "ratio": "1:1",
+             "stock": "Skull Faces"
+        }
+    ]
+}
+```

@@ -1,0 +1,51 @@
+```json
+{
+    "i_want": "Exalted Orb",
+    "i_have": "Orb of Chance",
+    "market_ratio": "3.71: 1",
+    "available_trades": [
+        {
+            "ratio": "3.71: 1",
+            "stock": 1113
+        },
+        {
+            "ratio": "3.70: 1",
+            "stock": 962
+        },
+        {
+            "ratio": "3.68: 1",
+            "stock": 92
+        },
+        {
+            "ratio": "3.67: 1",
+            "stock": 1353
+        },
+         {
+            "ratio": "3.66: 1",
+            "stock": 366
+        }
+    ],
+    "competing_trades": [
+        {
+            "ratio": "4:1",
+            "stock": 12
+        },
+        {
+            "ratio": "4.20: 1",
+            "stock": 65
+        },
+        {
+           "ratio": "4.21: 1",
+            "stock": 19
+        },
+         {
+            "ratio": "4.25: 1",
+            "stock": 272
+        },
+        {
+           "ratio": "4.29: 1",
+            "stock": 18
+        }
+    ]
+}
+```

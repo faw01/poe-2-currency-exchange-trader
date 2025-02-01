@@ -1,0 +1,43 @@
+```json
+{
+    "i_want": "Orb of Annulment",
+    "i_have": "Vaal Orb",
+    "market_ratio": "1:100",
+    "available_trades": [
+        {
+            "ratio": "1:100",
+            "stock": 3
+        },
+        {
+            "ratio": "1:198",
+            "stock": 1
+        }
+    ],
+    "competing_trades": [
+        {
+            "ratio": "1:17",
+             "stock": 289
+        },
+       {
+            "ratio": "1:16",
+            "stock": 160
+        },
+        {
+            "ratio": "1:15",
+            "stock": 630
+        },
+        {
+            "ratio": "1:14",
+             "stock": 672
+        },
+        {
+            "ratio": "1:10",
+            "stock": 10
+        },
+        {
+            "ratio": "> 1:10",
+             "stock": 63
+        }
+   ]
+}
+```

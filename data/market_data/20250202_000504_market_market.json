@@ -1,0 +1,57 @@
+{
+  "i_want": "Exalted Orb",
+  "i_have": "Chaos Orb",
+  "market_ratio": "5.24: 1",
+  "available_trades": [
+    {
+      "ratio": "5.24:1",
+      "stock": 110
+    },
+    {
+      "ratio": "5.23:1",
+      "stock": 523
+    },
+    {
+      "ratio": "5.23:1",
+      "stock": 1533
+    },
+    {
+      "ratio": "5.23:1",
+      "stock": 831
+    },
+    {
+      "ratio": "5.22:1",
+      "stock": 2610
+    },
+    {
+      "ratio": "< 5.22: 1",
+      "stock": 350757
+    }
+  ],
+  "competing_trades": [
+    {
+      "ratio": "5.38:1",
+      "stock": 39
+    },
+    {
+      "ratio": "5.43:1",
+      "stock": 56
+    },
+    {
+      "ratio": "5.43:1",
+      "stock": 37
+    },
+    {
+      "ratio": "5.45:1",
+      "stock": 1404
+    },
+    {
+      "ratio": "5.45:1",
+      "stock": 42
+    },
+    {
+      "ratio": "> 5.45: 1",
+      "stock": 41021
+    }
+  ]
+}

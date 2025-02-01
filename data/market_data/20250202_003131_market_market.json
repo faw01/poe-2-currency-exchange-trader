@@ -1,0 +1,57 @@
+{
+  "i_want": "Exalted Orb",
+  "i_have": "Armourer's Scrap",
+  "market_ratio": "1:2.25",
+  "available_trades": [
+    {
+      "ratio": "1:2.25",
+      "stock": 56
+    },
+    {
+      "ratio": "1:2.30",
+      "stock": 100
+    },
+    {
+      "ratio": "1:2.33",
+      "stock": 1089
+    },
+    {
+      "ratio": "1:2.36",
+      "stock": 275
+    },
+    {
+      "ratio": "1:2.38",
+      "stock": 21
+    },
+    {
+      "ratio": "<1:2.38",
+      "stock": 49245
+    }
+  ],
+  "competing_trades": [
+    {
+      "ratio": "1:2.10",
+      "stock": 21
+    },
+    {
+      "ratio": "1:2.03",
+      "stock": 364
+    },
+    {
+      "ratio": "1:2",
+      "stock": 418
+    },
+    {
+      "ratio": "1:1.97",
+      "stock": 554
+    },
+    {
+      "ratio": "1:1.96",
+      "stock": 880
+    },
+    {
+      "ratio": ">1:1.96",
+      "stock": 115045
+    }
+  ]
+}
